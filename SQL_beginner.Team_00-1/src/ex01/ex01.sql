@@ -46,6 +46,5 @@ SELECT
   tour 
 FROM 
   r 
-WHERE level = 5
-GROUP BY tour, total_cost
-HAVING MIN(total_cost) = 80;
+WHERE 
+  level = 5;
