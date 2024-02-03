@@ -40,12 +40,16 @@ WITH RECURSIVE r AS (
     ) 
   WHERE 
     level < 5
-) 
+), res AS (
 SELECT 
   DISTINCT total_cost, 
   tour 
 FROM 
   r 
-WHERE level = 5
-GROUP BY tour, total_cost
-HAVING MIN(total_cost) = 80;
+WHERE level = 5)
+SELECT *
+FROM res
+WHERE total_cost = (
+  SELECT MIN(total_cost)
+  FROM res
+);
