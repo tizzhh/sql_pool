@@ -6,11 +6,14 @@ SHOW TRANSACTION ISOLATION LEVEL;
 
 -- SESSION 1
 BEGIN;
-SELECT * FROM pizzeria WHERE name = 'Pizza Hut';
-
 
 -- SESSION 2
 BEGIN;
+
+--SESSION 1
+SELECT * FROM pizzeria WHERE name = 'Pizza Hut';
+
+--SESSION 2
 SELECT * FROM pizzeria WHERE name = 'Pizza Hut';
 
 -- SESSION 1
