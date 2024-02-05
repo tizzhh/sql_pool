@@ -1,5 +1,3 @@
-DROP FUNCTION fnc_person_visits_and_eats_on_date;
-
 CREATE FUNCTION fnc_person_visits_and_eats_on_date(IN pperson VARCHAR = 'Dmitriy', IN pprice NUMERIC = 500, IN pdate DATE = '08-01-2022')
 RETURNS SETOF VARCHAR
 AS $$

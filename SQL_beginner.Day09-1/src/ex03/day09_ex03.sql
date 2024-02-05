@@ -33,9 +33,11 @@ CREATE TRIGGER trg_person_audit
 
 SELECT * FROM person;
 SELECT * FROM person_audit;
+
 INSERT INTO person(id, name, age, gender, address)  VALUES (10,'Damir', 22, 'male', 'Irkutsk');
 UPDATE person SET name = 'Bulat' WHERE id = 10;
 UPDATE person SET name = 'Damir' WHERE id = 10;
 DELETE FROM person WHERE id = 10;
+
 SELECT * FROM person;
 SELECT * FROM person_audit;

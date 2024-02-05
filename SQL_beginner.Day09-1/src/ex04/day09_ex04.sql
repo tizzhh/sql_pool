@@ -7,7 +7,7 @@ $$ LANGUAGE SQL;
 CREATE FUNCTION fnc_persons_male() RETURNS SETOF person AS $$
     SELECT *
     FROM person
-    WHERE gender = 'female'
+    WHERE gender = 'male'
 $$ LANGUAGE SQL;
 
 SELECT *
