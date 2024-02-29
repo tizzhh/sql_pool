@@ -1,9 +1,6 @@
 insert into currency values (100, 'EUR', 0.85, '2022-01-01 13:29');
 insert into currency values (100, 'EUR', 0.79, '2022-01-08 13:29');
 
--- делал тут раньше CTE, потом понял, что он нах не нужен
--- с CTE по какой-то причине первые 2 ряда меняются местами
--- (прям как в задании должно быть), но он по-факту лишний код.
 SELECT DISTINCT
     COALESCE("user".name, 'not defined') AS name,
     COALESCE("user".lastname, 'not defined') AS lastname,
